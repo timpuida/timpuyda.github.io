@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Rhythm Test</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+</head>
+<body>
+		<div class="instruct">
+			<p>Інструкція:</p>
+			<p>Рівномірно натискайте на клавішу C або M, заповнюючи поле мітками</p>
+		</div>
+	<div class="wrap">
+		<div id="boxId" class="box">
+		</div>
+	</div>
+	<button id="buttonId" type="button">Спробувати знову</button>
+	<div class="table">
+	<p class="best">Рекорд: <span id="coordId">0</span><span>%</span></p>
+		<table border="1">
+			<tr>
+				<td>Середнє відхилення</td>
+				<td id="meanErrorsId"></td>
+			</tr>
+			<tr>
+				<td>Ритмічність</td>
+				<td id="coeffErrorsId"></td>
+			</tr>
+			<tr>
+				<td>btps</td>
+				<td id="btpsId"></td>
+			</tr>
+		</table>
+	</div>
+	<audio src="click.mp3" preload="auto"></audio>
+	<script src="ES.js"></script>
+</body>
+</html>
