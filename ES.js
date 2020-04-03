@@ -52,7 +52,7 @@ function leaveMark(){
 	}
 	if(left >= right-15){
 		up+=25;
-		left = sizeBox.left+(period/10);
+		left=(left-right)+sizeBox.left+15;
 	}
 	if(up>=height+15 ){
 		
