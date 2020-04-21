@@ -53,8 +53,8 @@ button:disabled{
 }
 .el{
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #8b8b92;
   display: flex;
