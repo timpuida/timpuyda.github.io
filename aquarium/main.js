@@ -1,44 +1,6 @@
 'use strict'
 
-// btns.addEventListener('click',function(event){
-// 		if (event.target==startBtn) {
-			
-// 			startBtn.disabled=true;
-// 			sec = 3;
-// 			count=0;
-// 			countDown.classList.remove('display-none');
-// 			counter.classList.remove('display-none');
-// 			overlay.classList.remove('display-none');
 
-
-// 		}
-// });
-
-
-
-// function fade(){
-// 	countDown.classList.add('animated-count');
-
-// 		if(count%2){
-// 			countDown.classList.remove('animated-count');
-// 			sec--;
-// 		}
-
-// 		if(count>5){
-// 			countDown.classList.add('animated-count');	
-// 			if (count>6) {
-// 				sec=3;
-// 				counter.classList.add('display-none');
-// 				countDown.classList.remove('animated-count');	
-// 				overlay.classList.add('display-none');
-// 				clearInterval(timer);
-// 			}
-// 		} 
-// 	count++;
-// 	console.log('coount: '+count);
-// 	countDown.textContent=sec;
-
-// }
 // game===========================================================================================
 
 let area = document.getElementById('area');
@@ -67,17 +29,6 @@ console.log('minTop = '+minTop);
 console.log('maxBottom = '+maxBottom);
 console.groupEnd();
 
-// function createNew(){
-// 	let newEl = document.createElement('div');
-// 	newEl.className = "el";
-// 	area.append(newEl);
-// }
-
-
-
-
-
-
 
 //  elems=========================================================================================
 function randomInteger(min, max) {
@@ -103,6 +54,7 @@ elems.forEach((item)=>{
 	item.isPrevStepDown=true;
 });
 
+
 // hunter el =====================================================================================================
 
 let hunter= document.createElement('div');
@@ -118,20 +70,7 @@ hunter.y=350; //from css transform
 
 hunter.maxMoveX=hunterStep;
 hunter.maxMoveY=hunterStep;
-// let hunterStep=10,
-// 	keyUp = 0, 
-// 	keyRight = 0,
-// 	keyDown = 0,
-// 	keyLeft = 0;
-// area.addEventListener('mousemove',hunterMove);
-// function hunterMove(event){
-	// console.log(event.offsetX + ' === '+ event.offsetY);
-// 	hunter.x= event.offsetX;
-// 	hunter.y=event.offsetY;
-// 	hunter.style.transform = 'translate('+hunter.x+'px, '+hunter.y+'px)';
-// // }	
-
-	 
+ 
 
 // animate===========================================================
 
@@ -154,18 +93,21 @@ function animateHunter(){
 }
 
 function animate(el,isStop){
+	if (isStop) return
 	// el.addEventListener('mousedown',function(event){
 	// 		el.isStopAnimation = true;
 	// 		el.remove();
 	// });
-if((el.x >= hunter.x-elSize.width)&& (el.x<=(hunter.x+hunterSize.width)) && (el.y>=hunter.y-elSize.height) && (el.y <= (hunter.y+hunterSize.height))){
-		el.isStopAnimation = true;
-		el.remove();
-		console.log('remooooove');
-	}
-	// console.log('x= '+el.x+ 'y = ' + el.y);
+	if((el.x >= hunter.x-elSize.width)&& (el.x<=(hunter.x+hunterSize.width)) && (el.y>=hunter.y-elSize.height) && (el.y <= (hunter.y+hunterSize.height)))
+		{
+			el.isStopAnimation = true;
+			el.remove();
+			hunterSize.width = hunterSize.width+.5;
+			hunterSize.height= hunterSize.height+.5;
+			hunter.style.width = hunterSize.width+'px';
+			hunter.style.height = hunterSize.height+'px';
+		}
 
-	if (isStop) return
 
 	el.x = randomInteger(el.minMoveX,el.maxMoveX);
 	el.y = randomInteger(el.minMoveY,el.maxMoveY);
@@ -265,4 +207,4 @@ moveEl=setInterval(function(){
 	};
 	// animateHunter();
 },100);
-let moveHunter=setInterval(animateHunter,500);
+let moveHunter=setInterval(animateHunter,300);
