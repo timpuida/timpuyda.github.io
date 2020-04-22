@@ -1,40 +1,26 @@
-﻿'use strict'
+'use strict'
 
 let coord = document.getElementById("coordId"),
  	box = document.getElementById('boxId'),
  	button = document.getElementById('buttonId'),
  	cellMeanErrors=document.getElementById('meanErrorsId'),
  	cellCoeffErrors =document.getElementById('coeffErrorsId'),
- 	cellbtpsId = document.getElementById('btpsId');
+ 	cellbtpsId = document.getElementById('btpsId'),
+	audio = document.querySelector('audio');
+
 
 let sizeBox= box.getBoundingClientRect();
 
-
-
-let left = sizeBox.left+1,
-up = sizeBox.top +1,
-right = sizeBox.right,
-height = sizeBox.bottom - up,
-start=0,
-count = 0,
-arr =[];
-
+	let left = 0,
+		up=0,
+		right = sizeBox.right-sizeBox.left,
+		height = sizeBox.bottom - sizeBox.top,
+		start=0,
+		count = 0,
+		arr = [];
 
 document.addEventListener('keydown', leaveMark);
 button.addEventListener('click',reset);
-
-function reset(){
-	let points =document.querySelectorAll('.point');
-	points.forEach((item,i)=>item.remove())
-	left = sizeBox.left+1;
-	up = sizeBox.top +1;
-	right = sizeBox.right;
-	height = sizeBox.bottom - up;
-	start=0;
-	count = 0;
-	arr =[];
-	document.addEventListener('keydown', leaveMark);
-}
 
 function leaveMark(){
 	if(event.code!='KeyM' && event.code!='KeyC' ) return;
@@ -42,35 +28,34 @@ function leaveMark(){
 	let time = performance.now(),
 		period = time - start;
 
-	arr.push(period);
 
 	start = time;
 
+	arr.push(period);
+	let point = document.createElement('div');
+	point.className = "point";
 
-	if(count){
-		left+=period/10;
+	if (count){
+		left += period/6;
 	}
-	if(left >= right-15){
+	if (left >= right-15) {
 		up+=25;
-		left=(left-right)+sizeBox.left+15;
+		left=(left-right);
+		if (left<0) {
+			left = 0;
+		}
 	}
-	if(up>=height+15 ){
-		
+	point.style.left = left+ 'px';
+	point.style.top = up +'px';
+	box.append(point);
+	if( up > height-15 ){
+		point.remove();
 		document.removeEventListener('keydown', leaveMark);
 		calculate();
 	}
 
-	let point = document.createElement('div');
-	point.className = "point";
-
-	point.style.left = left+ 'px';
-	point.style.top = up +'px';
-
-	document.body.append(point);
-	let audio = document.querySelector('audio');
-	
-	
-	audio.currentTime = 0;
+	audio.pause();
+	audio.currentTime = 0.0;
 	audio.play();
 	count++;
 
@@ -108,5 +93,15 @@ function calculate(){
 	cellbtpsId.textContent = btps;
 	cellMeanErrors.textContent = meanErrors +' мс';
 
+}
+function reset(){
+	let points =document.querySelectorAll('.point');
+	points.forEach((item)=>item.remove())
+	left = 0;
+	up = 0;
+	start=0;
+	count = 0;
+	arr =[];
+	document.addEventListener('keydown', leaveMark);
 }
 
