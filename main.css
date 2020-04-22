@@ -36,6 +36,7 @@ button{
 	cursor: pointer;
 	font-size: 	1.5rem;
 	text-transform: uppercase;
+	background-color: #e2ddd7;
 }
 button:focus{
 	outline: 0;
