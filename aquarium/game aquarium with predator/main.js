@@ -55,7 +55,7 @@ hunter.y=areaSizes.height-60;
 hunter.style.transform = 'translate('+hunter.x+'px, '+hunter.y+'px)';
 area.append(hunter);
 
-let	hunterSize = hunter.getBoundingClientRect();
+let hunterSize = hunter.getBoundingClientRect();
 let hunterStep=5;
 hunter.isStopAnimation = false;
 hunter.maxMoveX=hunterStep;
@@ -91,7 +91,6 @@ let playGame=window.requestAnimationFrame(function animateAll() {
 		// alert('message?: DOMString')	
 	}else{
 		timesLeft++;
-		console.log(timesLeft);
 	    if (timesLeft<200) requestAnimationFrame(animateAll);
 
 		// window.cancelAnimationFrame(playGame);
