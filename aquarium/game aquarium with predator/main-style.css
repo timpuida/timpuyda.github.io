@@ -1,4 +1,4 @@
-﻿body{
+body{
   background-color: #000;
 }
 .container{
@@ -49,7 +49,7 @@ button:disabled{
   margin: 0 auto;
   width: 95%;
   height: 500px;
-  border: 1px solid green;
+  border: 1px solid #cab943f5;
 }
 .hunter{
   position: absolute;
@@ -67,7 +67,7 @@ button:disabled{
   height: 10px;
   z-index: 2;
   border-radius: 50%;
-  background-color: #8b8b92;
+  background-color: #b3f1f7;
   pointer-events: none;
   /*transition: transform 0.15s linear;*/
   transform:  translate(0px,0px);
