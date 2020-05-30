@@ -1,5 +1,6 @@
 ﻿body{
   background-color: #000;
+   font-family: cursive;
 }
 .container{
   width: 100%;
@@ -33,6 +34,9 @@
 }
 .wrap{
 margin-top: 76px;
+}
+.instruction{
+  margin: 0 auto;
 }
 #btns{
   display: flex;
@@ -71,16 +75,7 @@ button:disabled{
   height: 100%;
   z-index: 1;
 }
-/*#newElId{
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: green;
-  transition: transform .5s ease;
-}*/
 p{
-  /*font-size: 8px;*/
   color: #fff;
 }
 
