@@ -1,5 +1,6 @@
 body{
   background-color: #000;
+  font-family: cursive;
 }
 .container{
   width: 100%;
@@ -58,7 +59,6 @@ button:disabled{
   height: 40px;
   border-radius: 50%;
   background-color: red;
-  /*pointer-events: none;*/
   transition: transform 0.15s ease;
 }
 .el{
@@ -69,7 +69,6 @@ button:disabled{
   border-radius: 50%;
   background-color: #b3f1f7;
   pointer-events: none;
-  /*transition: transform 0.15s linear;*/
   transform:  translate(0px,0px);
 }
 #me{
@@ -79,8 +78,7 @@ button:disabled{
   z-index: 3;
   border-radius: 50%;
   background-color: #32a339;
-  /*transition: transform 0.15s linear;*/
-  /*transform:  translate(100px, 300px);*/
+  
 }
 #overlay{
   position: absolute;
@@ -90,16 +88,10 @@ button:disabled{
   height: 100%;
   z-index: 1;
 }
-/*#newElId{
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: green;
-  transition: transform .5s ease;
-}*/
+
 p{
-  /*font-size: 8px;*/
+ width: 94%;
+  margin: 0 auto;
   color: #fff;
 }
 
