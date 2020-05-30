@@ -31,9 +31,6 @@
   transition-duration: .3s;
   transition-timing-function: ease-in, ease;
 }
-.wrap{
-margin-top: 76px;
-}
 .instruction{
   text-align: center
 }
