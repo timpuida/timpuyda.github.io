@@ -92,7 +92,7 @@ color: #6d6d6d;
 .phone i{
 	color: #fff;
 }
-li{
+.search-call div{
 	margin: 0 25px;
 	height: 100%;
 	display: flex;
@@ -107,7 +107,6 @@ h1.title{
 .supply{
 	margin-left: 50%;
 	max-width: 23%;
-	/*margin-top: 150px;*/
 }
 .screen{
 	padding-top: 9rem;
@@ -119,10 +118,7 @@ h1.title{
 	background-size: cover;
 	cursor: default;
 }
-/*p{
-	font-weight: inherit;
-	font-size: inherit;
-}*/
+
 button{
 	cursor:pointer;
 	user-select: none;
@@ -171,8 +167,6 @@ div[data-select]{
 	top: 0;
 	display: block;
 	pointer-events: none;
-
-
 }
 .select-body{
 	display: none;
@@ -195,7 +189,6 @@ div[data-select]{
 }
  .select-item:hover{
 	text-decoration: underline;
-
 }
 .select-placeholder{
 	color: #666;
@@ -216,7 +209,6 @@ input[type="submit"]{
 	width: 46%;
 }
 .b-screen{
-	/*padding-top: 9rem;*/
 	position: relative;
 }
 .light-img{
@@ -247,8 +239,6 @@ input[type="submit"]{
 	flex-wrap: wrap;
 }
 .col{
-	/*width: 45%;*/
-	/*padding: 0.2rem 1rem;*/
 	padding: 2% 3%;
 	position: relative;
 }
@@ -299,7 +289,6 @@ input[type="submit"]{
 /*d-screen d-screen d-screen d-screen d-screen */
 .catalog{
 	display: flex;
-	/*height: 100%;*/
 	align-content: stretch;
 }
 .catalog p{
@@ -311,7 +300,6 @@ input[type="submit"]{
 	width: 33%;
 	display: flex;
 	flex-direction: column;
-	/*flex:1 1 content;*/
 }
 .wrap:nth-child(even){
 	margin-top: 0;
@@ -319,15 +307,7 @@ input[type="submit"]{
 .wrap{
 	position: relative;
 	height: 100%;
-	/*width: 100%;*/
-	/*display: flex;*/
-	/*flex-direction: column;*/
-	/*justify-content: space-between;*/
-	/*flex-basis: 100%;*/
-	/*flex-wrap: wrap;*/
 	margin: 1.5rem 0.5rem;
-	/*padding: 1rem;*/
-	/*border: 1px solid #777;*/
 	background-color: #ddd;
 	overflow: hidden;
 }
@@ -339,9 +319,7 @@ input[type="submit"]{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/*position: relative;*/
 	height: 100%;
-	/*z-index: 10;*/
 }
 .wrap .text{
 	padding: 1rem;
@@ -354,11 +332,6 @@ input[type="submit"]{
 	margin: 1rem 1rem 1rem 0;
 	flex-shrink: 0;
 }
-/*.wrap .text{
-	flex-shrink: 10;
-	flex-basis: 50%;
-	flex-grow: 1;
-}*/
 .wrap-1{
 	flex-flow: row nowrap;
 	flex:1 3;
@@ -374,19 +347,14 @@ input[type="submit"]{
 }
 .wrap-2 img{
 	width: 130%;
-	/*position: relative;*/
 	margin-right: 0;
 	margin-left: auto;
-	/*flex:20 19;*/
-	/*left: 1rem;*/
 }
 .wrap-3{
-	/*flex-wrap: wrap;*/
 	flex:19 20;
 }
 .wrap-3 .text{
 	width: 70%;
-
 }
 .wrap-3 a>img{
 	position: absolute;
@@ -396,13 +364,11 @@ input[type="submit"]{
 	margin: 0;	
 }
 .img-box{
-	/*position: relative;*/
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	padding-left: 1rem;
-
 }
 .img-box img{
 	display: block;
@@ -428,8 +394,6 @@ input[type="submit"]{
 .wrap-5 img{
 	position: relative;
 	width: 100%;
-	/*left: -1rem;*/
-	/*width: calc(100% + 2rem);*/
 	margin: 0;
 	padding: 0;
 }
@@ -468,7 +432,6 @@ input[type="submit"]{
 }
 .slide-box{
 	display: flex;
-	/*justify-content: space-between;*/
 	background-color: #f2f2f2;
 }
 .slide{
@@ -491,15 +454,10 @@ input[type="submit"]{
 .decor-img{
 	position: relative;
 	width: 40%;
-	/*pointer-events: none;*/
-	/*flex: 1 1;*/
-	/*width: 1px;*/
-	/*height: 1px;*/
 }
 .decor-img img{
 	display: block;
 	position: absolute;
-	/*width: 13%;*/
 	left: 0rem;
 	top: 0;
 	width: 5vw;
