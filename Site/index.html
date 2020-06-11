@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
+<div id="body">
+		
 	<header id="main">
 		<div class="navbar container">
 			<div id="logotype">
@@ -17,25 +19,24 @@
 				<span class="site-name">Site Name</span>
 			</div>
 			<nav>
-				<a href="#main">Главная</a>
-				<a href="#about-us">О нас</a>
-				<a href="#advantages">Преимущества</a>
-				<a href="#catalog">Каталог</a>
-				<a href="#feedbacks">Отзывы</a>
-				<a href="#contacts">Контакты</a>
+				<a href="#main" v-smooth-scroll>Главная</a>
+				<a href="#about-us" v-smooth-scroll>О нас</a>
+				<a href="#advantages" v-smooth-scroll>Преимущества</a>
+				<a href="#catalog" v-smooth-scroll>Каталог</a>
+				<a href="#feedbacks" v-smooth-scroll>Отзывы</a>
+				<a href="#contacts" v-smooth-scroll>Контакты</a>
 			</nav>
 			<div class="search-call">
-					<a class="search" href="#form">
-						<li><i class="fas fa-search"></i></li>
+					<a class="search" href="#form" v-smooth-scroll="{ duration: 1000, offset: -50}">
+						<div><i class="fas fa-search"></i></div>
 					</a>	
-					<a class = "phone" href="#contacts">
-						<li><i class="fas fa-phone"></i></li>
+					<a class = "phone" href="#contacts" v-smooth-scroll="{ duration: 1000}">
+						<div><i class="fas fa-phone"></i></div>
 					</a>
 				
 			</div>
 		</div>
 	</header>
-	</body>
 	<main>
 		<section class="a-screen screen">
 			<div class="supply go-up">
@@ -60,50 +61,15 @@
 								<option value="something3">Стол</option>
 								<option value="something4">Шкаф</option>
 								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
 							</select>
 							<select name="size" id="sizeId">
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
+								<option value="120x150">120x150</option>
+								<option value="180x60">180x60</option>
+								<option value="190x50">190x50</option>
 							</select>
 							<select name="consist" id="consistId">
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
-								<option value="something1">Диван</option>
-								<option value="something2">Стул</option>
-								<option value="something3">Стол</option>
-								<option value="something4">Шкаф</option>
-								<option value="something5">Тумба</option>
+								<option value="Wood">Дерево</option>
+								<option value="Plastic">Пластмаса</option>
 							</select>
 						</noscript>
 						<div class="select" data-select='1'>
@@ -115,7 +81,7 @@
 								<p class="select-item" data-value="sofa">Диван</p>
 								<p class="select-item" data-value="chair">Стул</p>
 								<p class="select-item" data-value="table">Стол</p>
-								<p class="select-item"data-value="cupboard">Шкаф</p>
+								<p class="select-item" data-value="cupboard">Шкаф</p>
 								<p class="select-item" data-value="pedestal">Тумба</p>
 							</div>
 						</div>
@@ -126,7 +92,7 @@
 							</div>
 							<div class="select-body">
 								<p class="select-item" data-value="120x150">120x150</p>
-								<p class="select-item"data-value="180x60">180x60</p>
+								<p class="select-item" data-value="180x60">180x60</p>
 								<p class="select-item" data-value="190x150">190x150</p>
 							</div>
 						</div>
@@ -147,7 +113,7 @@
 			</div>
 		</section>
 		<section class="b-screen screen">
-			<img class="light-img"src="images/light.png" alt="">
+			<img class="light-img" src="images/light.png" alt="">
 			<div class="container ">
 				<h2 id="about-us">О нас</h2>
 				<div class="columns">
@@ -252,13 +218,11 @@
 					<div class="col-3">
 						<div class="wrap wrap-1">
 						<a href="#">
-							<!-- <a href="#"> -->
 								<div class="text">
 									<h3>Диваны</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, laboriosam.</p>
 								</div>
 								<img src="images/sofa-catalog.png" alt="">
-							<!-- </a> -->
 						</a>
 						</div>
 						<div class="wrap wrap-2">
@@ -372,6 +336,7 @@
 				</div>
 			</div>
 		</section>		
+
 	</main>
 	<footer id="contacts">
 		<div class="container">
@@ -381,29 +346,32 @@
 					<span class="site-name">Site Name</span>
 				</div>
 				<div class="f-menu">
-						<p><a href="#main">Главная</a></p>
-						<p><a href="#about-us">О нас</a></p>
-						<p><a href="#advantages">Преимущества</a></p>
-						<p><a href="#catalog">Каталог</a></p>
-						<p><a href="#feedbacks">Отзывы</a></p>
-						<p><a href="#contacts">Контакты</a></p>					
+						<p><a href="#main" v-smooth-scroll="{ duration: 1000}">Главная</a></p>
+						<p><a href="#about-us" v-smooth-scroll="{ duration: 1000, offset: -50}">О нас</a></p>
+						<p><a href="#advantages" v-smooth-scroll="{ duration: 500, offset: -50}">Преимущества</a></p>
+						<p><a href="#catalog" v-smooth-scroll="{ duration: 500, offset: -50}">Каталог</a></p>
+						<p><a href="#feedbacks" v-smooth-scroll>Отзывы</a></p>
+						<p><a href="#contacts" v-smooth-scroll>Контакты</a></p>					
 					
 				</div>
 				<div class="f-contacts">
-					<p class="phone-number"><i class="fas fa-phone"></i>&nbsp +8498409844</p>
+					<p class="phone-number"><i class="fas fa-phone"></i>&nbsp; +8498409844</p>
 					
-					<p class="site-domain"><a href="#"><i class="fas fa-globe-europe"></i>&nbsp Sitename.ru</a></p>
-					<p class="mail"><i class="fas fa-envelope"></i>&nbsp qwert@gmail.com</p>
+					<p class="site-domain"><a href="#"><i class="fas fa-globe-europe"></i>&nbsp; Sitename.ru</a></p>
+					<p class="mail"><i class="fas fa-envelope"></i>&nbsp; qwert@gmail.com</p>
 					<p class="socials"><a href="#"><i class="fab fa-vk"></i></a>
 						<a href="#"><i class="fab fa-facebook-f"></i></a>
-						<a href=""><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
 					</p>
-					
 				</div>
 			</div>
 		</div>
 	</footer>
-</body>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://unpkg.com/vue2-smooth-scroll"></script>
+<script> new Vue({ el: '#body'})</script>
 <script src="javascript/form.js"></script>
 <script src="javascript/slider.js"></script>
+</body>
 </html>
