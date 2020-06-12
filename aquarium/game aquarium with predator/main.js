@@ -133,6 +133,8 @@ function ifConsumed(predator,predatorSize, victim,victimSize){
 		 (victim.y <= predator.y + predatorSize.height - victimSize.height*0.7 ) ){
 	victim.isStopAnimation = true;
 	victim.remove();
+	predatorSize.width += victimSize.width*0.05;
+	predatorSize.height += victimSize.width*0.05;
 	predator.style.width = predatorSize.width + 'px';
 	predator.style.height = predatorSize.height + 'px';
 	}
