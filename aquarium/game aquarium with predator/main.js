@@ -18,7 +18,7 @@ let areaSizes = area.getBoundingClientRect(),
 	minTop = areaSizes.top+1,
 	maxBottom = areaSizes.bottom-1;
 
-//  elems=========================================================================================
+//  elems==================================================================
 let stepEl = 5,
 	
 	percntToCompare=.98;
@@ -113,7 +113,6 @@ function animateHunter(isStop){
 	}
 	hunter.minMoveX = hunter.x;
 	hunter.minMoveY = hunter.y;
-	// console.log('hunter.x = '+hunter.x+' hunter.y = ' + hunter.x);
 	wayMake(hunter,hunterStep);
 	takeEdge(hunter,hunterSize,hunterStep);
 	hunter.x = randomInteger(hunter.minMoveX,hunter.maxMoveX);
@@ -122,7 +121,6 @@ function animateHunter(isStop){
 }
 
 function ifConsumed(predator,predatorSize, victim,victimSize){
-
 	
 	if ( (victim.x >= predator.x - victimSize.width*0.3) &&
 		 (victim.x <= predator.x + predatorSize.width - victimSize.width*0.7) && 
@@ -130,12 +128,6 @@ function ifConsumed(predator,predatorSize, victim,victimSize){
 		 (victim.y <= predator.y + predatorSize.height - victimSize.height*0.7 ) ){
 	victim.isStopAnimation = true;
 	victim.remove();
-	try {
-		predatorSize.width = predatorSize.width + victimSize.width*0.05;
-		predatorSize.height= predatorSize.height + victimSize.width*0.05;
-	} catch(e) {
-		console.log(e);
-	}
 	predator.style.width = predatorSize.width + 'px';
 	predator.style.height = predatorSize.height + 'px';
 	}
