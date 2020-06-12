@@ -4,6 +4,11 @@
 // game===========================================================================================
 
 let area = document.getElementById('area');
+for(let i=0; i<91;i++){
+	let els = document.createElement('div');
+	els.className= "el";
+	area.append(els);
+}
 let elems = document.querySelectorAll('.el');
 let countBalls=elems.length;
 let moveEl;
