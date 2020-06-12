@@ -18,15 +18,6 @@ let areaSizes = area.getBoundingClientRect(),
 	minTop = areaSizes.top+1,
 	maxBottom = areaSizes.bottom-1;
 
-console.groupCollapsed('data');
-console.log('areaHeight = '+areaHeight);
-console.log('areaWidth = '+areaWidth);
-console.log('minLeft = '+minLeft);
-console.log('maxRight = '+maxRight);
-console.log('minTop = '+minTop);
-console.log('maxBottom = '+maxBottom);
-console.groupEnd();
-
 //  elems=========================================================================================
 let stepEl = 5,
 	
@@ -46,7 +37,7 @@ elems.forEach((item)=>{
 });
 
 
-// hunter el =====================================================================================================
+// hunter el =========================================================
 
 let hunter= document.createElement('div');
 hunter.className="hunter";
@@ -88,12 +79,10 @@ let playGame=window.requestAnimationFrame(function animateAll() {
 	animateHunter(hunter.isStopAnimation)
     if ( myEl.isStopAnimation==false && (hunter.isStopAnimation==false || document.querySelector('.el')!== null) ){
       requestAnimationFrame(animateAll);
-		// alert('message?: DOMString')	
+		
 	}else{
 		timesLeft++;
 	    if (timesLeft<200) requestAnimationFrame(animateAll);
-
-		// window.cancelAnimationFrame(playGame);
 	}
 });
 
@@ -112,7 +101,7 @@ area.addEventListener('contextmenu',function(event){
 document.addEventListener('keydown',moveMyEl);
 
 
-// animate===========================================================
+// animate=====================================================
 
 function animateHunter(isStop){
 	if (isStop) return;
@@ -218,19 +207,15 @@ function takeEdge(elem,elementSize,step){
 
 	if(elem.x<(0 +elementSize.width +step)){
 		turnRight(elem,step);
-		// console.log('AUCH lefttttt');
 	}
 	if(elem.x>(maxRight-minLeft-elementSize.width-step)){
 		turnLeft(elem,step);
-		// console.log('AUCH rightttttttt');
 	}
 	if(elem.y<(0 +elementSize.height+step)){
 		turnDown(elem,step);
-		// console.log('AUCH topppppp');
 	}
 	if(elem.y>(maxBottom-minTop-elementSize.height-step)){
 		turnUp(elem,step);
-		// console.log('AUCH bottommm');
 	}
 }
 
