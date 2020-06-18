@@ -9,10 +9,18 @@
 <body>
 	<div id="overlay" class="display-none"></div>
 	<div class="container">
+			<div id="btns">
+				<button id="start-game">Start Game</button>
+				<p id="result">Результат:</p>
+			</div>
+			
+		<div id="counter" class="display-none">
+			<h1 class="count-down display-none">3</h1>
+		</div>
 		<div class="wrap">
-			<p>Допоможіть зеленому кругу з'їсти всіх, керуючи ним кнопками навігації. 
+			<p class="instruction">Допоможіть зеленому кругу з'їсти всіх, керуючи ним кнопками навігації. 
 				Якщо ваш розмір менше черваного, тримайтесь його подалі</p>
-			<div id="area">
+			<div id="area" tabindex="-1">
 			</div>
 		</div>	
 	</div>
