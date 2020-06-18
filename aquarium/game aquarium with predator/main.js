@@ -1,16 +1,61 @@
 'use strict'
+// start game===============================================
+let counter=document.getElementById('counter'),
+	btns=document.getElementById('btns'),
+	overlay=document.getElementById('overlay'),
+	startBtns=document.getElementById('start-game'),
+	result = document.getElementById('result'),
+	countDown = counter.querySelector('.count-down'),
+	sec = 3,
+	timer,
+	count=0,
+	startTime;
 
+btns.addEventListener('click',function(event){
+	if (event.target==startBtns) {
+		sec = 3;
+		count=0;
+		countDown.classList.remove('display-none');
+		counter.classList.remove('display-none');
+		overlay.classList.remove('display-none');
+		timer=setInterval(fade,500);
+		startGame();
 
-// game===========================================================================================
+	}
+});
 
+function fade(){
+	countDown.classList.add('animated-count');
+		if(count%2){
+			countDown.classList.remove('animated-count');
+			sec--;
+		}
+
+		if(count>6){
+			countDown.classList.add('animated-count');	
+			if (count>7) {
+				counter.classList.add('display-none');
+				countDown.classList.remove('animated-count');	
+				clearInterval(timer);
+				overlay.classList.add('display-none');
+				startBtns.disabled=true;
+				area.focus();
+				startTime= new Date();
+			}
+		} 
+	count++;
+	countDown.textContent=sec;
+}
+
+// game environment=======================================
 let area = document.getElementById('area');
 for(let i=0; i<91;i++){
 	let els = document.createElement('div');
 	els.className= "el";
 	area.append(els);
 }
+
 let elems = document.querySelectorAll('.el');
-let countBalls=elems.length;
 let moveEl;
 
 
@@ -23,35 +68,35 @@ let areaSizes = area.getBoundingClientRect(),
 	minTop = areaSizes.top+1,
 	maxBottom = areaSizes.bottom-1;
 
-//  elems==================================================================
+
+//  elems=========================================================================================
 let stepEl = 5,
-	
-	percntToCompare=.98;
+	percntToCompare=0.98;
 
 let isPrevStepRight=true;
 let isPrevStepDown=true;
 
-elems.forEach((item)=>{
-	item.isStopAnimation=false;
-	item.minMoveX= 1;
-	item.minMoveY = 1;
-	item.maxMoveX=stepEl;
-	item.maxMoveY=stepEl;
-	item.isPrevStepRight=true;
-	item.isPrevStepDown=true;
-});
+for (let i = 0; i<elems.length; i++){
+	elems[i].isStopAnimation=false;
+	elems[i].minMoveX= 1;
+	elems[i].minMoveY = 1;
+	elems[i].maxMoveX=stepEl;
+	elems[i].maxMoveY=stepEl;
+	elems[i].isPrevStepRight=true;
+	elems[i].isPrevStepDown=true;
+}
 
 
-// hunter el =========================================================
+// hunter el =====================================================================================================
 
 let hunter= document.createElement('div');
 hunter.className="hunter";
-hunter.x=areaSizes.width/3;
-hunter.y=areaSizes.height-60; 
+hunter.x=areaWidth/3;
+hunter.y=areaHeight-60; 
 hunter.style.transform = 'translate('+hunter.x+'px, '+hunter.y+'px)';
 area.append(hunter);
 
-let hunterSize = hunter.getBoundingClientRect();
+let	hunterSize = hunter.getBoundingClientRect();
 let hunterStep=5;
 hunter.isStopAnimation = false;
 hunter.maxMoveX=hunterStep;
@@ -61,35 +106,41 @@ hunter.maxMoveY=hunterStep;
 
 let myEl = document.createElement('div');
 myEl.id = 'me';
-myEl.x=areaSizes.right-150;
-myEl.y=areaSizes.height-60;
+myEl.x=areaWidth-0.1*areaWidth;
+myEl.y=areaHeight-460;
 myEl.style.transform = 'translate('+myEl.x+'px, '+myEl.y+'px)';
 myEl.isStopAnimation=false;
 area.append(myEl);
 let	myElSize = myEl.getBoundingClientRect();
 
-
-let arrowUp =1,
+let arrowUp =0,
 arrowRight = 0,
 arrowDown = 0,
-arrowLeft = 0;
+arrowLeft = 1;
 let timesLeft=0;
 
-let playGame=window.requestAnimationFrame(function animateAll() {
-
-    for(let i=0; i<elems.length; i++){
-		animate(elems[i],elems[i].isStopAnimation)
-	};
-	animateMyEl(myEl.isStopAnimation);
-	animateHunter(hunter.isStopAnimation)
-    if ( myEl.isStopAnimation==false && (hunter.isStopAnimation==false || document.querySelector('.el')!== null) ){
-      requestAnimationFrame(animateAll);
-		
-	}else{
-		timesLeft++;
-	    if (timesLeft<200) requestAnimationFrame(animateAll);
-	}
-});
+function startGame(){
+	window.requestAnimationFrame(function animateAll() {
+	    for(let i=0; i<elems.length; i++){
+			animate(elems[i],elems[i].isStopAnimation);
+		}
+		if (count>=8) {
+		animateMyEl(myEl.isStopAnimation);
+		animateHunter(hunter.isStopAnimation);
+		}
+	
+	    if ( myEl.isStopAnimation===false && (hunter.isStopAnimation===false || document.querySelector('.el')!== null) ){
+	      requestAnimationFrame(animateAll);
+		}else if (myEl.isStopAnimation===true) {
+			// window.cancelAnimationFrame(playGame);
+			result.textContent = " Спробуйте ще раз";
+			
+		}else {
+			let stopTime = Math.floor((new Date()- startTime)/1000);
+			result.textContent += " "+ stopTime +" сек";
+		}
+	});
+}
 
 
 function randomInteger(min, max) {
@@ -106,16 +157,10 @@ area.addEventListener('contextmenu',function(event){
 document.addEventListener('keydown',moveMyEl);
 
 
-// animate=====================================================
+// animate===========================================================
 
 function animateHunter(isStop){
-	if (isStop) return;
-	if (myElSize.width > hunterSize.width) {
-		ifConsumed(myEl,myElSize, hunter,hunterSize);
-		hunter.style.zIndex = '3';
-	}else{
-		hunter.style.zIndex = '4';
-	}
+	if (isStop) return
 	hunter.minMoveX = hunter.x;
 	hunter.minMoveY = hunter.y;
 	wayMake(hunter,hunterStep);
@@ -123,20 +168,29 @@ function animateHunter(isStop){
 	hunter.x = randomInteger(hunter.minMoveX,hunter.maxMoveX);
 	hunter.y = randomInteger(hunter.minMoveY,hunter.maxMoveY);
 	hunter.style.transform = 'translate('+hunter.x+'px, '+hunter.y+'px)';
+	if (myElSize.width > hunterSize.width) {
+		ifConsumed(myEl,myElSize, hunter,hunterSize);
+		hunter.style.zIndex = '3';
+	}else{
+		hunter.style.zIndex = '4';
+	}
 }
 
 function ifConsumed(predator,predatorSize, victim,victimSize){
+
 	
 	if ( (victim.x >= predator.x - victimSize.width*0.3) &&
 		 (victim.x <= predator.x + predatorSize.width - victimSize.width*0.7) && 
 		 (victim.y >= predator.y - victimSize.height*0.3) &&
 		 (victim.y <= predator.y + predatorSize.height - victimSize.height*0.7 ) ){
-	victim.isStopAnimation = true;
-	victim.remove();
-	predatorSize.width += victimSize.width*0.05;
-	predatorSize.height += victimSize.width*0.05;
-	predator.style.width = predatorSize.width + 'px';
-	predator.style.height = predatorSize.height + 'px';
+		victim.isStopAnimation = true;
+		victim.remove();
+			predatorSize.width +=  victimSize.width*0.05;
+			predatorSize.height += victimSize.height*0.05;
+		predator.style.width = predatorSize.width + 'px';
+		predator.style.height = predatorSize.height + 'px';
+		victim.x=null;
+		victim.y=null;
 	}
 }
 
@@ -161,16 +215,16 @@ function animate(el,isStop){
 function edge(element,elementSize){
 	if (element.x < 0) {
 	element.x = 0;
-	};
+	}
 	if(element.x > areaWidth - elementSize.width) {
 		element.x =  areaWidth - elementSize.width;
-	};
+	}
 	if(element.y < 0) {
 		element.y = 0;
-	};
+	}
 	if(element.y > areaHeight - elementSize.height) {
 	element.y = areaHeight - elementSize.height;
-	};
+	}
 }
 
 function wayMake(elem,step){
@@ -297,7 +351,5 @@ function animateMyEl(isStop){
 	}
 	 edge(myEl,myElSize);
 	myEl.style.transform = 'translate('+myEl.x+'px, '+myEl.y+'px)';
-
-	
 }
 
