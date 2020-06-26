@@ -1,0 +1,204 @@
+﻿@media screen and (max-width:1024px){
+	.header-text h1 {
+    font-size: 38px;
+	}
+	h2{
+		font-size: 34px;
+	}
+	h3{
+		font-size: 21px;
+	}
+	.nbar span {
+    font-size: 18px;
+	}
+	.provide{
+	flex-direction: column;
+	}
+	.provide-text{
+		width: 100%;
+	}
+	.services{
+		margin-top: 60px;
+		width: 100%;
+	}
+	input[type=email]{
+	padding: 15px 200px 15px 20px;
+	}
+	input[type=submit]{
+		padding: 15px 45px;
+	}
+	.section-3 input {
+		padding: 30px 10% 30px 50px;
+		font-size: 14px;
+	}
+	.social-icons{
+		width: 17%;
+	}
+	textarea{
+		font-size: 15px;}
+}
+
+@media screen and (max-width:768px){
+	.body{
+		width: 100%;
+	}
+	.container{
+		width: 80%;
+		}
+	header {
+		width: 100%;
+	}
+	.menu{
+		height: 100%;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+	}
+	.logo{
+		margin: 0 auto
+	}
+	nav{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		height: 100%;
+		width: 100%;
+	}
+	.nav-menu{
+		flex-direction: column;
+	}
+	nav li{
+		box-sizing: border-box;
+		padding: 30px;
+	}
+	.fas.fa-bars{
+	display: block;
+	}
+	.header-text {
+		width: 100%;
+	}
+	.header-text h1 {
+    font-size: 31px;
+	}
+	
+	.after-menu{
+	flex-direction: column;
+	width: 100%;
+	}
+	.after-menu p{
+		width: 100%;
+	}
+	
+	.video{
+		margin-top: 100px;
+		width: 95%;
+	}
+	.provide-text{
+		display: flex;
+		flex-direction: column;
+	}
+	h2 {
+    font-size: 25px;
+	}
+	.service-element {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+	}
+	h3 {
+    margin-left: 14px;
+	}
+	.section-1 p {
+    width: 100%;
+	}
+	.nbar {
+		flex-direction: column;
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.pictures{
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.pic{
+		width: 100%;
+	}
+	.author{
+		flex-direction: column;
+	}
+	.main-photo{
+		width: 100%;
+	}
+	.main-photo img{
+		width: 100%;
+	}
+	.mark{
+		width: 100%;
+		margin-top: 5rem;
+	}
+	.social-mark a{
+		text-decoration:underline;	
+	}
+	.photo-mark {
+		flex-direction: column;
+	}
+	.photo img{
+		width: 95%;
+		border: none;
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	input[type=email] {
+		    padding: 15px 15%;
+	}
+	.name-email {
+		flex-direction: column;
+	}
+	.name-email input {
+		width: 100%;
+		margin: 5px 0;
+    padding: 15px 15%;
+	}
+	.flex-form-aside {
+		flex-direction: column;
+	}
+	aside{
+		width: 100%;
+	}
+	.section-3 form{
+		width: 80%;
+	}
+	.subscribe input{
+		margin-top: 18px;
+	}
+	section-3 hr{
+		width: 10%;
+	}
+	footer{
+		margin-top: 0;
+		background-color: #2d2d2d;
+		flex-direction: column-reverse;
+	}
+	.social-icons{
+		width: 66%;
+	}
+}
+@media screen and (max-width:426px){
+	.box-photo{
+		flex-flow: column;
+		align-items: center;
+	}
+	.photo{
+		width: 100%;
+	}
+	.social-mark a{
+		letter-spacing: 0;
+	}
+}
