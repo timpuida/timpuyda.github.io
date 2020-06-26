@@ -1,0 +1,95 @@
+﻿@media screen and (max-width:1024px){
+	p, .offer-box-wrap p{
+		font-size:0.8rem; 
+	}
+	h1{
+		font-size: 2em;
+	}
+	.logo{
+		font-size: 2em;
+	}
+	h2{
+		font-size: 1rem;
+	}
+	.section-2 .block-img img{
+		width: 50%;
+	}
+	.menu li{
+		font-size: 1.4em;
+	}
+
+	
+} 
+@media screen and (max-width:768px){
+	 p, .offer-box-wrap p, .logo p{
+		font-size: 0.75rem;
+	}
+	h1{
+		font-size: 1.3rem;
+	}
+	h2{
+		font-size: 0.9rem;
+	}
+	.search-form{
+		top:8rem;
+	}
+	.menu li{
+		font-size: 1.2em;
+	}
+	.offer-box{
+		width: 45%;
+	}
+	.section-1 .block{
+		flex-direction: column;
+	}
+	.section-1{
+		display: flex;
+	}
+	.section-1 .block-txt, .section-1 .block-img{
+		width: 100%;
+	}
+	.section-1 .block-txt{
+		order:10;
+	}
+	.txt{
+		width: 84%;
+	}
+	.section-2 .block-img img{
+		width: 70%;
+		margin-left: 1em;
+	}
+	.main-img{
+		background-position: 55% 0%;
+	}
+	.logo{
+		padding:10.53rem 6rem 1.125rem 6rem
+	}
+
+}
+@media screen and (max-width: 425px){
+	p, .offer-box-wrap p, {
+		font-size:0.7rem ;
+	}
+	.logo p{
+		font-size: 0.5rem;
+	}
+	h1{
+		font-size:1.1rem;
+	}
+	.menu li{
+		font-size: 1em;
+	}
+	.menu{
+		position: relative;
+		left:1em;
+	}
+	.section-2 .block-img img{
+		margin-left:1em;
+		width: 80%; 
+	}
+	.logo{
+		padding: 162px 85px 20px 85px;
+		font-size: 1em;
+
+	}
+}
