@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -864,6 +864,9 @@
 						<p>Новый заказ</p>
 					</div>
 					<div class="popup-body">
+						<form action="#" method="POST">
+							
+						
 						<label>Клиент
 							<input type="text"></label>
 							<label>Авто
@@ -871,6 +874,24 @@
 								<option value="Mitsubishi Outlander">Mitsubishi Outlander</option>
 							</select></label>
 							<label>Дата, время получения
+								<span class="item-row">
+									<span class="popup-group-input popup-group-input-date ">
+										<input type="date" 	min="2020-06-29" >
+										<span class="popup-new-img-wrap">
+											
+											<img src="img/icon-calendar.png" alt="">
+										</span>
+									</span>
+									<span class="popup-group-input">
+										<input type="time" 	min="09:00" max="18:00" value="09:00">
+										<span class="popup-new-img-wrap">
+											
+											<img src="img/icons-clock.png" alt="">
+										</span>
+									</span>
+								</span>
+							</label>
+							<label>Дата, время возврата
 								<span class="item-row">
 									<span class="popup-group-input popup-group-input-date ">
 										<input type="date" 	min="2020-06-29" >
@@ -902,6 +923,8 @@
 								<label class="col-3">Залог <input type="text" value="400$"></label>
 
 							</div>
+							<input class="btn" type="submit" value="Создать"></input>
+						</form>
 					</div>
 				</div>
 			</div>
