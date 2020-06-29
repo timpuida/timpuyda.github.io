@@ -351,6 +351,8 @@ input[type="date"]{
     margin: 24px auto 0;
     width: 30%;
     order: 2;
+    min-height: 140px;
+
   }
   .filter-addbtn{
     width: 96%;
