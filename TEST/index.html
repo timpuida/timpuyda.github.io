@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<header class="header container">
+		<aside class="rent-aside">
+			<div class="aside-header">
+				<img src="img/Rectangle.png" alt="">
+				<span>АРЕНДА</span>
+			</div>
+			<div class="aside-body">
+				<a href="#"><img src="img/Rectangle.png" alt="">Профиль</a>
+				<a href="#"><img src="img/Rectangle.png" alt="">Статистика</a>
+				<a href="#"><img src="img/Rectangle.png" alt="">Заказы</a>
+			</div>
+		</aside>
+		<a href="" class="menu-link"><img src="img/menu-icon.png" alt="menu" class="menu-icon"></a>
+		<form class="menu-form form" method="GET" action="#" role="search">
+			<div class="group-input">
+			<a href="#">
+				<img src="img/search-icon.png" alt="">
+			</a>
+			<input class="search" type="search" placeholder="Поиск">
+			</div>
+			<a href="#" class="filter-icon-link"><img class="filter-icon" src="img/filt.png" alt=""></a>
+		</form>
+	</header>
+	<main>
+		<div class="container">
+			<div class="filter-addbtn">
+				<form action="#">
+					<div class="filter">
+							<label for="calendar">Дата: </label><input type="date" id="calendar" name="calendar" min="2020-06-29">
+							<label for="status">Статус: </label>
+							<select name="status" id="status">
+								<option value="violations">С нарушениями</option><option value="no violations">Без нарушений</option>
+							</select>
+					</div>
+					<div class="btn-view">
+						<button type="submit" class="btn">Добавить</button>
+						<a href="#" class="view"><img src="img/view1.png" alt=""></a><a href="#" class="view"><img src="img/view2.png" alt=""></a>
+					</div>	
+				</form>
+			</div>
+			<div class="wrap-items">
+				<div id="overlay" class="hide"></div>
+			<a class="add-box" href="#">
+				<div class="item-add ">
+						<div class="add-btn-icon"><p>+</p></div>
+						<p class="add-btn-text">Добавить</p>
+				</div>
+			</a>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-row">
+						<div class="number-status">
+							<p class="item-number">№425</p>
+							<p class="item-status">В процессе</p>
+						</div>
+						<a class="item-menu" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+					<div class="item-row">
+						<div class="auto-name">Mitsubushi Outlander
+						</div>
+						<div class="auto-mark"></div>
+					</div>
+					<div class="item-row">
+						<div class="auto-city">Киев</div>
+						<p class="auto-time-using">2 дня</p>
+					</div>
+					<div class="item-row">
+						<div class="auto-price price">
+							<span class="main-price">135$</span>
+							<span class="discount">(-25$)</span>
+						</div>
+						<p class="auto-time-dates">
+							21.05.2020-23.05.2020
+						</p>
+					</div>
+					<div class="popup popup-opening hide">
+						<div class="item-row">
+							<p>Получение: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Возврат: </p>
+							<div>
+								<p class="black">ул. Симона Петлюры, 27
+								</p>
+								<p><span>09:00</span> <span>03.05.2020</span></p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Клиент: </p>
+							<div>
+								<p class="black">Иван Иванов
+								</p>
+								<p>+380505555555</p>
+							</div>
+						</div>
+						<div class="item-row">
+							<p>Залог: </p>
+							<div class="price">200$</div>
+						</div>
+						<div class="item-row">
+							<p>Создал: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<div class="item-row">
+							<p>Принял: </p>
+							<div class="black">Денис Александрович</div>
+						</div>
+						<form action="#" method="POST">
+							<label><input type="checkbox">Игнорировать верификацию клиента</label>
+							<input class="btn" type="submit" value="Принять">
+						</form>
+					</div>
+				</div>
+				<div class="popup popup-new hide">
+					<div class="popup-header">
+						<p>Новый заказ</p>
+					</div>
+					<div class="popup-body">
+						<label>Клиент
+							<input type="text"></label>
+							<label>Авто
+							<select name="automobile-brend" id="automobile-brend">
+								<option value="Mitsubishi Outlander">Mitsubishi Outlander</option>
+							</select></label>
+							<label>Дата, время получения
+								<span class="item-row">
+									<span class="popup-group-input popup-group-input-date ">
+										<input type="date" 	min="2020-06-29" >
+										<span class="popup-new-img-wrap">
+											
+											<img src="img/icon-calendar.png" alt="">
+										</span>
+									</span>
+									<span class="popup-group-input">
+										<input type="time" 	min="09:00" max="18:00" value="22:00">
+										<span class="popup-new-img-wrap">
+											
+											<img src="img/icons-clock.png" alt="">
+										</span>
+									</span>
+								</span>
+							</label>
+							<label>
+								Место возврата
+								<input type="text">
+							</label>
+							<label>
+								Дополнительные услуги
+								<input type="text">
+							</label>
+							<div class="item-row col-3">
+								<label class="col-3">Цена <input type="text" value="135$"></label>
+								<label class="col-3">Скидка <input type="text" value="25$"></label>
+								<label class="col-3">Залог <input type="text" value="400$"></label>
+
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="JS/popups.js"></script>
+</body>
+</html>
