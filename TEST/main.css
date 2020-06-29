@@ -1,7 +1,5 @@
-﻿*{
-  box-sizing: border-box;
-}
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -10,8 +8,6 @@ body {
   scroll-behavior: smooth;
   line-height: 1.5;
 }
-
-
 img {
   max-width: 100%;
   display: block;
@@ -21,11 +17,24 @@ a{
   text-decoration: none;
   cursor: pointer;
 }
+a:active, a:focus { outline: none; }
+
+input, textarea {
+  outline:none;
+}
+input:active, textarea:active {
+  outline:none;
+}
+*:focus {
+  outline:none;
+}
 input,
 button,
 textarea,
 select {
   font: inherit;
+  -webkit-appearance: none;
+  background-color: #fff;
 }
 button, select{
   cursor: pointer;
@@ -91,6 +100,10 @@ input.search{
 input[type="checkbox"]{
   width: auto;
   margin-right: 7px;
+ -webkit-appearance: checkbox;
+ appearance: checkbox;
+ box-shadow: none;
+ height: 15px;
 }
 input[type="submit"]{
   display: block;
@@ -222,7 +235,7 @@ p.add-btn-text{
   align-self: flex-end;
 }
 .popup{
-  position: absolute;
+  position: relative;
   z-index: 3;
   left: 0;
   right: 0;
@@ -235,6 +248,11 @@ p.add-btn-text{
 }
 .hide{
   display: none;
+}
+.absolute{
+  position: absolute;
+  margin: 0 auto;
+  width: 90%;
 }
 #overlay{
   position: fixed;
@@ -273,6 +291,7 @@ aside{
 .popup-new .popup-header{
   border-radius: 6px 6px 0 0;
   font-size: 18px;
+  padding: 12px 24px 24px 0;
 }
 .popup-new label{
   display: block;
@@ -325,6 +344,7 @@ input[type="date"]{
 }
 .popup-new .popup-body{
   color:#808080;
+  border-top: 2px solid #fff;
 
 }
 .item-row .col-3{
