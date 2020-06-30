@@ -484,4 +484,7 @@ input[type="date"]{
   .popup-new{
     width: 50%;
   }
+   .popup-new .popup-group-input img{
+  margin-top: calc(100% - 20px);
+}
 }
