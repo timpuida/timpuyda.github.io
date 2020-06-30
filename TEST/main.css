@@ -135,7 +135,6 @@ img.filter-icon{
   color: #fff;
 }
 .wrap-items{
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -143,7 +142,7 @@ img.filter-icon{
 .item{
   position: relative;
   background-color: #fff;
-  margin: 24px auto 0;
+  margin: 24px 0 0;
   width: 100%;
   padding: 16px;
   box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
@@ -153,13 +152,13 @@ img.filter-icon{
   display: flex;
   align-items: center;
   position: relative;
-  background-color: #fff;
+  margin: 24px 0 0;
   width: 100%;
   height: 63px;
+  background-color: #fff;
   box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   justify-content: center;
-  margin: 0 auto; 
 }
 .item-add{
   display: flex;
@@ -199,14 +198,25 @@ p.add-btn-text{
   color: #7cc0ff;
   margin-left: 8px;
 }
-.item-menu span{
+.item-menu .item-menu-circles span{
   display: inline-block;
   background-color: #C4C4C4;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   margin: 0 2px;
+  pointer-events: none;
 }
+.item-menu .item-menu-circles{
+  pointer-events: none;
+
+}
+.item-menu .item-menu-close{
+  pointer-events: none;
+  font-size: 16px;
+  color:#808080;
+}
+
 .auto-name{
   color: #171717;
   font-size: 16px;
@@ -235,7 +245,7 @@ p.add-btn-text{
   align-self: flex-end;
 }
 .popup{
-  position: relative;
+  position: absolute;
   z-index: 3;
   left: 0;
   right: 0;
@@ -361,22 +371,26 @@ input[type="date"]{
     display: block;
   }
   .container{
-    width: calc(90% - 260px);
+    width: calc(95% - 260px);
     margin-left: 260px;
   }
-  .item{
-    width: 30%;
-  }
   .add-box{
-    margin: 24px auto 0;
+    margin: 24px 0 0;
     width: 30%;
     order: 2;
     min-height: 140px;
 
   }
+  .item{
+    width: 30%;
+  }
+  .wrap-items{
+    margin-left: 36px;
+  }
   .filter-addbtn{
     width: 96%;
     margin: 0 auto;
+    margin-right: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -396,6 +410,10 @@ input[type="date"]{
     height: 35px;
     box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
     margin-right: 24px;
+    padding-left: 16px;
+  }
+  .filter label{
+    margin-right: 12px;
   }
   .filter-icon-link{
     display: none;
