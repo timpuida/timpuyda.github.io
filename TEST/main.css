@@ -328,6 +328,7 @@ aside{
   margin: 0 auto; 
   margin-top: calc(100% - 16px);
 }
+
 .popup-new .item-row{
   min-height: 0;
 }
@@ -372,23 +373,20 @@ input[type="date"]{
   }
   .container{
     width: calc(95% - 260px);
-    margin-left: 260px;
+    margin-left: 296px;
   }
   .add-box{
     margin: 24px 0 0;
     width: 30%;
     order: 2;
     min-height: 140px;
-
+    height: auto;
   }
   .item{
     width: 30%;
   }
-  .wrap-items{
-    margin-left: 36px;
-  }
   .filter-addbtn{
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     margin-right: 0;
     display: flex;
@@ -484,7 +482,7 @@ input[type="date"]{
   .popup-new{
     width: 50%;
   }
-   .popup-new .popup-group-input img{
+  .popup-new .popup-group-input img{
   margin-top: calc(100% - 20px);
 }
 }
