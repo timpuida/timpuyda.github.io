@@ -1,4 +1,4 @@
-﻿* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -560,6 +560,9 @@ hr {
   .profit .form-mob {
     display: none;
   }
+  .profit .form{
+    box-shadow: none;
+  }
   .profit .form input {
     height: 31px;
   }
@@ -577,10 +580,13 @@ hr {
     height: 54px;
   }
   .personal-area .circle-1 {
-    background: url(/images/4-1.svg) no-repeat center, url(http://localhost:3000/images/4-2.svg) no-repeat 41% 66%, url(/images/4-3.svg) no-repeat 55% 41%;
+    background: url("images/4-1.svg") no-repeat center,
+     url("images/4-2.svg") no-repeat 41% 66%, 
+     url(images/4-3.svg) no-repeat 55% 41%;
   }
   .personal-area .circle-2 {
-    background: url(http://localhost:3000/images/5.svg) no-repeat center, url(http://localhost:3000/images/4-3.svg) no-repeat 39.5% 34%;
+    background: url('images/5.svg') no-repeat center, 
+    url('images/4-3.svg') no-repeat 39.5% 34%;
   }
   .personal-area .flex {
     flex-flow: row nowrap;
