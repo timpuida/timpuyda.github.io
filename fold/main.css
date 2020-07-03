@@ -257,7 +257,7 @@ hr {
   margin: 0;
   position: fixed;
   top: 10%;
-  max-width: 432px;
+  max-width: 298px;
   left: 50%;
   margin-left: -145px;
   right: auto;
@@ -455,6 +455,9 @@ hr {
   background: url(images/arrow-up.svg) no-repeat 95% 50%;
 }
 @media only screen and (min-width: 400px) {
+  #popup{
+    max-width: 432px
+  }
   body {
     font-size: 11px;
   }
