@@ -6,6 +6,9 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="main.css" type="text/css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
 <body>
@@ -92,32 +95,94 @@
 			<div class="wrap">
 				<div class="profit screen">
 					<h1>Прибыль</h1>
-					<div id="profit-slider">
-						<div class="slide-window">
-							<div class="slide" v-for="(slide,index) in slides" v-if="slide.order">
-								<div class="pic"><img :src="'images/'+slide.href" alt="">
-								</div>
-								<div class="title-slide">
-									<p>{{slide.class}}</p>
-								</div>
-								<div class="flex">
-									<div class="income">{{slide.income}}</div>
-									<a href="#">
-										<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="dots">
-							<div class="dot" 
-							v-for="(slide,index) in slides" 
-							@click="changeSlide(index)"
-							 :class="{'active-dot': slide.order}">
-								
-							</div>
-							
-						</div>
+					<div class="swiper-container" id="profit-slider">
+		    <!-- Additional required wrapper -->
+		    <div class="swiper-wrapper ">
+		        <!-- Slides -->
+		        <!-- <div class="swiper-slide">Slide 1</div> -->
+		        
+		        <div class="slide swiper-slide" >
+					<div class="pic"><img src="images/ford-focus-1.png" alt="">
 					</div>
+					<div class="title-slide">
+						<p>средний класс</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 600-800 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+				<div class="slide swiper-slide">
+					<div class="pic"><img src="images/kia-1.png" alt="">
+					</div>
+					<div class="title-slide">
+						<p>эконом класс</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 300-600 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+				<div class="slide swiper-slide">
+					<div class="pic"><img src="images/mazda-1.png" alt="">
+					</div>
+					<div class="title-slide">
+						<p>БИЗНЕСС КЛАСС</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 800-1300 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+				<div class="slide swiper-slide">
+					<div class="pic"><img src="images/subaru-1.png" alt="">
+					</div>
+					<div class="title-slide">
+						<p>СПОРТ КЛАСС</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 500-1000 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+				<div class="slide swiper-slide">
+					<div class="pic"><img src="images/hotpng-1.png" alt="">
+					</div>
+					<div class="title-slide">
+						<p>ПРЕМИУМ КЛАСС</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 700-1800 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+				<div class="slide swiper-slide">
+					<div class="pic"><img src="images/toyota.png" alt="">
+					</div>
+					<div class="title-slide">
+						<p>ВНЕДОРОЖНИКИ</p>
+					</div>
+					<div class="flex">
+						<div class="income">Ежемесячный доход от 600-1900 USD</div>
+						<a href="#">
+							<p class="more-btn call-pop">ПОДРОБНЕЕ</p>
+						</a>
+					</div>
+				</div>
+
+		    </div>
+			    <div class="swiper-pagination"></div>
+		</div>
 						<div class="form" id="form-contact">
 							
 							<div id="popup" :class="{hidden:isHiddenPop}"><a class="close-pop" @click.prevent="isHiddenPop=true"  href="#">
@@ -276,67 +341,32 @@
 		
 	</main>
 	<footer></footer>
-	
 	<script>
-		new Vue({
-			el:'#profit-slider',
-			name:'slider',
-			data(){
-				return{
-					slides:[
-						{	
-							order:1,
-							href:'ford-focus-1.png',
-							class: 'средний класс',
-							income:'Ежемесячный доход от 600-800 USD'
-						},
-						{	
-							order:0,
-							href:'kia-1.png',
-							class: 'эконом класс',
-							income:'Ежемесячный доход от 300-600 USD'
-						},
-						{	
-							order:0,
-							href:'mazda-1.png',
-							class: 'средний класс',
-							income:'Ежемесячный доход от 500-1000 USD'
-						},
-						{	
-							order:0,
-							href:'subaru-1.png',
-							class: 'СПОРТ КЛАСС',
-							income:'Ежемесячный доход от 500-1000 USD'
-						},
-						{	
-							order:0,
-							href:'hotpng-1.png',
-							class: 'ПРЕМИУМ КЛАСС',
-							income:'Ежемесячный доход от 700-1800 USD'
-						},
-						{	
-							order:0,
-							href:'toyota.png',
-							class: 'ВНЕДОРОЖНИКИ',
-							income:'Ежемесячный доход от 600-1900 USD'
-						},
-					]
-				}
-			},
-			methods:{
-				changeSlide(i){
-					this.slides.forEach((slide)=>slide.order=0);
-					this.slides[i].order=1;
-				}
-			},
-			mounted(){
-				if(document.documentElement.clientWidth > 1000){
-					this.slides.forEach(i=>i.order=1);
+	if(document.documentElement.clientWidth < 1000){
 
+	  var mySwiper = new Swiper('.swiper-container', {
+	  	 autoplay: { 
+        delay: 3500, 
+      }, 
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: false,
+		  renderBullet: function (index, className) {
+		    return '<span class="' + className + '">Slide # ' + (index + 1) + '</span>';
+		  },
 
-				};
-			}
+		  // If we need pagination
+		  pagination: {
+		    el: '.swiper-pagination',
+		    type: 'bullets',
+		    clickable:'true',
+
+		  },
+
 		})
+	}
+	</script>
+	<script>
 
 		new Vue({
 			el:'#faq',
