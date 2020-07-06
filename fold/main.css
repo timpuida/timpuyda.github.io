@@ -192,53 +192,62 @@ hr {
   border: 1px solid #fff;
   margin: 16px 0;
 }
+.swiper-pagination-bullet {
+  position: relative;
+  margin-top:35px;
+    width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(196, 218, 255, 0.5), 0px 0px 5px rgba(190, 197, 255, 0.3);
+  cursor: pointer;
+  }
 #profit-slider {
-  margin-top: 16px;
+  margin:57px auto;
+  box-shadow: 0px 0px 15px rgba(195, 218, 255, 0.5), 0px 0px 4px rgba(190, 197, 255, 0.3);
 }
 #profit-slider .slide-window {
   display: flex;
   flex-flow: column nowrap;
   flex-shrink: 0;
 }
-#profit-slider .slide-window .slide {
-  box-shadow: 0px 0px 15px rgba(195, 218, 255, 0.5),
-   0px 0px 4px rgba(190, 197, 255, 0.3);
+#profit-slider .slide {
    border-radius: 2px;
+   margin-bottom: 35px;
 }
-#profit-slider .slide-window .income {
+#profit-slider .income {
   color: #fff;
   background: #0A89FE;
 }
-#profit-slider .slide-window .more-btn {
+#profit-slider .more-btn {
   background-color: #EFF5FB;
 }
-#profit-slider .slide-window .pic {
+#profit-slider .pic {
   overflow: hidden;
   margin: 10px;
 }
-#profit-slider .slide-window .pic img {
+#profit-slider .pic img {
   height: 117px;
   margin: 0 auto;
 }
-#profit-slider .slide-window .flex {
+#profit-slider .flex {
   flex-flow: row nowrap;
 }
-#profit-slider .slide-window .flex > * {
+#profit-slider .flex > * {
   flex-basis: 50%;
 }
-#profit-slider .slide-window .flex a {
+#profit-slider  .flex a {
   color: #45536E;
 }
-#profit-slider .slide-window .income,
-#profit-slider .slide-window .more-btn {
+#profit-slider .income,
+#profit-slider .more-btn {
   padding: 6px 15px;
   font-weight: 500;
   height: 36px;
 }
-#profit-slider .slide-window .title-slide {
+#profit-slider .title-slide {
   padding: 16px;
 }
-#profit-slider .slide-window .title-slide p {
+#profit-slider .title-slide p {
   text-transform: uppercase;
   text-align: left;
   font-weight: 500;
@@ -615,8 +624,8 @@ hr{
   .profit .form .select-input .select-header {
     height: 31px;
   }
-  .profit #profit-slider .slide-window .income,
-  .profit #profit-slider .slide-window .more-btn {
+  .profit #profit-slider .income,
+  .profit #profit-slider .more-btn {
     height: 54px;
   }
   
@@ -678,6 +687,9 @@ hr{
   border:1px solid #EAEAEA;
   margin-top: 30px;
 }
+#profit-slider .slide{
+  margin-bottom: 10px;
+}
   .wrap {
     padding: 0 165px;
   }
@@ -719,24 +731,36 @@ hr{
     font-size: 14px;
     font-weight: 500;
   }
+  #profit-slider{
+    box-shadow: none;
+  }
   #profit-slider .slide-window {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-end;
   }
-  #profit-slider .slide-window .slide {
+  .swiper-container{
+    overflow: initial;
+  }
+  .swiper-wrapper{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #profit-slider .slide {
+    box-shadow: 0px 0px 15px rgba(195, 218, 255, 0.5),
+     0px 0px 4px rgba(190, 197, 255, 0.3);
     margin-top: 40px;
     width: 45%;
   }
-  #profit-slider .slide-window .slide .pic img {
+  #profit-slider .slide .pic img {
     min-height: 130px;
   }
-  #profit-slider .slide-window .slide .flex {
+  #profit-slider .slide .flex {
     width: 100%;
     align-items: stretch;
   }
-  #profit-slider .slide-window .slide .income,
-  #profit-slider .slide-window .slide .more-btn {
+  #profit-slider .slide .income,
+  #profit-slider .slide .more-btn {
     font-size: 14px;
     height: auto;
     width: 50%;
@@ -744,7 +768,7 @@ hr{
   .income{
     text-align: left;
   }
-  #profit-slider .slide-window .slide .more-btn {
+  #profit-slider .slide .more-btn {
     width: 100%;
     height: 100%;
     padding: 10px 18px;
@@ -754,7 +778,7 @@ hr{
   }
 }
 @media only screen and (min-width: 1200px) {
-  #profit-slider .slide-window .slide {
+  #profit-slider .slide {
     margin-top: 27px;
     width: 32%;
   }
@@ -762,3 +786,4 @@ hr{
     font-size: 14px;
   }
 }
+
