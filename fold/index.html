@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,9 +6,9 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="main.css" type="text/css">
-	<!-- <link rel="stylesheet/less" href="main.less" type="text/css"> -->
-	<!-- <script src="less.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
 	<header></header>
@@ -46,25 +46,29 @@
 				<div class="cards">
 					<div class="card">
 						<img src="images/how-it-works-1.jpg" alt="">
-						<p class="img-desc">
-							Связываетесь с нашим менеджером
-						</p>
+						<div class="img-desc">
+							<p>Связываетесь с нашим менеджером</p>
+						</div>
 					</div>
 					<div class="card">
 						<img src="images/how-it-works-2.jpg" alt="">
-						<p class="img-desc">Заключаем договор</p>
+						<div class="img-desc">
+							<p>
+								Заключаем договор
+							</p>
+					</div>
 					</div>
 					<div class="card">
 						<img src="images/how-it-works-3.jpg" alt="">
-						<p class="img-desc">Оборудуем автомобиль системой оналайн связи и мониторинга </p>
+						<div class="img-desc"><p>Оборудуем автомобиль системой оналайн связи и мониторинга</p> </div>
 					</div>
 					<div class="card">
 						<img src="images/how-it-works-4.jpg" alt="">
-						<p class="img-desc">Автомобиль поступает в прокат и приносит прибыль с первого дня</p>
+						<div class="img-desc"><p>Автомобиль поступает в прокат и приносит прибыль с первого дня</p></div>
 					</div>
 					<div class="card">
 						<img src="images/how-it-works-5.jpg" alt="">
-						<p class="img-desc">Наслаждаетесь беззаботным настоящим</p>
+						<div class="img-desc"><p>Наслаждаетесь беззаботным настоящим</p></div>
 					</div>
 					<button class="button call-pop">ЗВОНОК МЕНЕДЖЕРА</button>
 				</div>
@@ -183,8 +187,7 @@
 						<p>Расширенная статистика</p><p> по автомобилям</p>
 					</div>
 					<div class="img-desc">
-						<div class="">
-							<img src="images/map-icon.png" alt="">
+						<div class="circle circle-3">
 						</div>
 						<p>Система online мониторинга</p><p> автомобиля</p>
 					</div>
@@ -216,28 +219,33 @@
 							</div>
 						</div>
 					</div>
-					<button class="button call-pop">ХОЧУ ПОСТОЯННЫЙ ДОХОД</button>
+					<button class="button button-desk call-pop">ХОЧУ ПОСТОЯННЫЙ ДОХОД</button>
 				</div>
+				<button class="button button-mob call-pop">ХОЧУ ПОСТОЯННЫЙ ДОХОД</button>
 			</div>
 			<div class="faq screen" id="faq">
 				<h1 class="wrap">FAQ</h1>
 				<div class="questions" @click="openAnswer($event)">
-
+					
 					<div class="question background-arrow-down">
 						<p class="question-ask">Сколько автомобилей можно посставить в работу, для того чтоб получать пассивный доход?</p>
 						<!-- <transition name="faq">	 -->
 						<p class="question-answer hide">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						</p>
+						<hr>
 						<!-- </transition> -->
 					</div>
 
 					<div class="question background-arrow-down">
 						<p class="question-ask">У меня уже есть автомобиль, можно ли его поставить в работу и получать пассивный доход?</p>
+						
+
 						<!-- <transition name="faq">	 -->
 						<p class="question-answer hide">
 							Да, Вы можете поставить свой автомобиль в работу, для этого Вам необходимо связаться с нашим менеджером любым удобным для Вас способом и обсудить все детали
 						</p>
+						<hr>
 						<!-- </transition> -->
 
 					</div>
@@ -246,19 +254,23 @@
 						<p class="question-answer hide">
 							Lorem ipsum dolor sit.
 						</p>
+						<hr>
 					</div>
 					<div class="question background-arrow-down">
 						<p class="question-ask">Как узнать сколько может зарабатывать мой автомобиль в месяц?</p>
 						<p class="question-answer hide">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						</p>
+						<hr>
 					</div>	
 					<div class="question background-arrow-down">
 						<p class="question-ask">Какая минимальная сумма вложений, чтоб начать получать пассивный доход?</p>
 						<p class="question-answer hide">
 							Lorem ipsum dolor sit amet, consectetur.
 						</p>
+						<hr>
 					</div>
+
 				</div>
 			</div>
 		
@@ -266,11 +278,8 @@
 		
 	</main>
 	<footer></footer>
+	
 	<script>
-		
-		
-			
-		
 		new Vue({
 			el:'#profit-slider',
 			name:'slider',
@@ -326,7 +335,8 @@
 				if(document.documentElement.clientWidth > 1000){
 					this.slides.forEach(i=>i.order=1);
 
-				}
+
+				};
 			}
 		})
 
@@ -346,6 +356,7 @@
 						target.classList.remove('background-arrow-up');
 					}
 					target.children[1].classList.toggle('hide');
+					target.children[2].classList.toggle('hide');
 					target.children[0].classList.toggle('mute-color');
 				}
 			}
