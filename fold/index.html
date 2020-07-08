@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="slick.css"/>
 	<link rel="stylesheet" href="main.css" type="text/css">
-
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="jquery-2.2.4.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
 <body>
@@ -95,13 +95,12 @@
 			<div class="wrap">
 				<div class="profit screen">
 					<h1>Прибыль</h1>
-					<div class="swiper-container" id="profit-slider">
-		    <!-- Additional required wrapper -->
-		    <div class="swiper-wrapper ">
+					<div class="slick-container" id="profit-slider">
+		    <div class="slick-wrapper">
 		        <!-- Slides -->
-		        <!-- <div class="swiper-slide">Slide 1</div> -->
 		        
-		        <div class="slide swiper-slide" >
+		        
+		        <div class="slide " >
 					<div class="pic"><img src="images/ford-focus-1.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -114,7 +113,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="slide swiper-slide">
+				<div class="slide">
 					<div class="pic"><img src="images/kia-1.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -127,7 +126,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="slide swiper-slide">
+				<div class="slide">
 					<div class="pic"><img src="images/mazda-1.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -140,7 +139,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="slide swiper-slide">
+				<div class="slide">
 					<div class="pic"><img src="images/subaru-1.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -153,7 +152,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="slide swiper-slide">
+				<div class="slide">
 					<div class="pic"><img src="images/hotpng-1.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -166,7 +165,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="slide swiper-slide">
+				<div class="slide">
 					<div class="pic"><img src="images/toyota.png" alt="">
 					</div>
 					<div class="title-slide">
@@ -181,9 +180,7 @@
 				</div>
 
 		    </div>
-			    <!-- <div class="swiper-pagination"></div> -->
-			    <div class="swiper-button-prev"></div>
-			    <div class="swiper-button-next"></div>
+			    
 		</div>
 						<div class="form" id="form-contact">
 							
@@ -294,24 +291,20 @@
 					
 					<div class="question background-arrow-down">
 						<p class="question-ask">Сколько автомобилей можно посставить в работу, для того чтоб получать пассивный доход?</p>
-						<!-- <transition name="faq">	 -->
 						<p class="question-answer hide">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						</p>
 						<hr>
-						<!-- </transition> -->
 					</div>
 
 					<div class="question background-arrow-down">
 						<p class="question-ask">У меня уже есть автомобиль, можно ли его поставить в работу и получать пассивный доход?</p>
 						
 
-						<!-- <transition name="faq">	 -->
 						<p class="question-answer hide">
 							Да, Вы можете поставить свой автомобиль в работу, для этого Вам необходимо связаться с нашим менеджером любым удобным для Вас способом и обсудить все детали
 						</p>
 						<hr>
-						<!-- </transition> -->
 
 					</div>
 					<div class="question background-arrow-down">
@@ -343,34 +336,21 @@
 		
 	</main>
 	<footer></footer>
+	<script src="slick.min.js"></script>
 	<script>
-	if(document.documentElement.clientWidth < 1000){
-
-	  var mySwiper = new Swiper('.swiper-container', {
-	  	 autoplay: { 
-        delay: 3500, 
-      }, 
-		  // Optional parameters
-		  direction: 'horizontal',
-		  loop: false,
-		  renderBullet: function (index, className) {
-		    return '<span class="' + className + '">Slide # ' + (index + 1) + '</span>';
-		  },
-
-		  // If we need pagination
-		  // pagination: {
-		  //   el: '.swiper-pagination',
-		  //   type: 'bullets',
-		  //   clickable:'true',
-
-		  // },
-		  navigation: {
-		    nextEl: '.swiper-button-next',
-		    prevEl: '.swiper-button-prev',
-		  },
-
-		})
-	}
+		if(document.documentElement.clientWidth < 1000){
+			$('.slick-wrapper').slick({
+				dots: false,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: true,
+				arrows: true,
+				mobileFirst:true,
+				nextArrow: '<div class="slick-button-next"></div>',
+				prevArrow:'<div class="slick-button-prev"></div>',
+			});
+		}
 	</script>
 	<script>
 
