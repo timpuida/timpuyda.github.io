@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+<!-- ссылки на бутстрап -->
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!-- временные стили. Эти стили есть в app и тд -->
+
+	<style>
+		ul{
+			padding-left: 0;
+			margin-left: 0;
+		}
+		.btn-outline {
+		  background-color: #0988ff;
+			border-color: #0988ff;
+			color:#fff;
+		}
+		.btn-outline:hover{
+			color: #fff;
+			background-color: #0988ff;
+			border-color: #0988ff;
+		}
+		.btn-outline:focus{
+			color: #fff;
+			background-color: #0988ff;
+			border-color: #0988ff;
+		}
+		#search_filters .facet .collapse {
+		    display: block;
+		}
+		ul{
+			list-style: none;
+		}
+		#search_filters .facet .facet-label a {
+		    color: #45536e;
+		    text-align: left;
+		    display: inline-block;
+		    font-weight: 500;
+		}
+		#search_filters .facet .facet-label a:hover {
+		    color: #0988ff;
+		    text-decoration: none;
+		}
+	</style>
+
+	<!-- исправление верстки -->
+	<style>
+		.filter-images{
+			width: 50px;
+			height: auto;
+			flex-grow: 0;
+			flex-shrink: 0;
+
+		}
+	</style>
+
+	<!-- filters -->
+	<div id="left-column" class="sidebar col-xs-12 col-sm-12 col-md-12 col-lg-3">
+		<div id="search_filters" class="block">
+			<div class="title hidden-md-up">
+				<button class="btn btn-outline" id="closeFilters">
+					<span>
+						Закрити
+						<span>
+							фільтр
+						</span>
+					</span>
+				</button>
+				<button class="btn btn-outline open_filter" id="openFilters" style="display: none;">
+					<span>
+						Відкрити фільтр
+					</span>
+				</button>
+			</div>
+			<div class="block_content">
+				<section class="facet clearfix">
+					<p class="h6 facet-title">
+						Місто
+					</p>
+					<div class="custom_select">
+						<select class="form-control" id="changeCity">
+							<option selected="" value="">
+								Не обрано
+							</option>
+							<option value="dnipro">
+								Днепр
+							</option>
+							<option value="kiev">
+								Киев
+							</option>
+						</select>
+					</div>
+				</section>
+				<section class="facet clearfix">
+					<p class="h6 facet-title">
+						Марка автомобілю
+					</p>
+					<div class="custom_select">
+						<select class="form-control" id="changeMake">
+							<option selected="" value="">
+								Не обрано
+							</option>
+							<option value="9">
+								BMW
+							</option>
+							<option value="24">
+								Ford
+							</option>
+							<option value="29">
+								Hyundai
+							</option>
+							<option value="33">
+								Kia
+							</option>
+							<option value="47">
+								Mazda
+							</option>
+							<option value="52">
+								Mitsubishi
+							</option>
+							<option value="71">
+								Smart
+							</option>
+							<option value="84">
+								Volkswagen
+							</option>
+						</select>
+					</div>
+				</section>
+				<section class="facet clearfix">
+					<p class="h6 facet-title hidden-sm-down">
+						Клас автомобілю
+					</p>
+					<ul class="collapse">
+						<li value="1">
+							<label class="facet-label page_speed_549504356">
+								<a class="gray-darker search-link"><img data-src="/images/classes/5cb9b95e9e1d2.png" alt="Эконом" src="5cb9b95e9e1d2.png" class="lazy page_speed_980502916 filter-images"></a>
+								<a href="#" class="changeClass" value="econom"> Эконом </a>
+							</label>
+						</li>
+						<li value="2">
+							<label class="facet-label page_speed_549504356">
+								<a class="gray-darker search-link"><img data-src="/images/classes/5cb9b9675b981.png" alt="Средний" src="5cb9b9675b981.png" class="lazy page_speed_980502916 filter-images"></a>
+								<a href="#" class="changeClass" value="middle"> Средний </a>
+							</label>
+						</li>
+						<li value="3">
+							<label class="facet-label page_speed_549504356">
+								<a class="gray-darker search-link"><img data-src="/images/classes/5cb9b96dd363f.png" alt="Бизнес" src="5cb9b96dd363f.png" class="lazy page_speed_980502916 filter-images"></a>
+								<a href="#" class="changeClass" value="business"> Бизнес </a>
+							</label>
+						</li>
+						<li value="5">
+							<label class="facet-label page_speed_549504356">
+								<a class="gray-darker search-link"><img data-src="/images/classes/5cb9b97a131e5.png" alt="Внедорожник" src="5cb9b97a131e5.png" class="lazy page_speed_980502916 filter-images"></a>
+								<a href="#" class="changeClass" value="suv"> Внедорожник </a>
+							</label>
+						</li>
+					</ul>
+				</section>
+				<section class="facet clearfix">
+					<p class="h6 facet-title hidden-sm-down">
+						Тип палива
+					</p>
+					<ul class="collapse">
+						<li value="1">
+							<label class="facet-label page_speed_693218987">
+								<a class="gray-darker search-link"><img data-src="/images/fuel/default.png" alt="Бензин" class="lazy page_speed_980502916 filter-images" src="default.png"></a>
+								<a href="#" class="changeFuel" value="1"> Бензин </a>
+							</label>
+						</li>
+						<li value="2">
+							<label class="facet-label page_speed_693218987">
+								<a class="gray-darker search-link"><img data-src="/images/fuel/default.png" alt="Дизель" class="lazy page_speed_980502916 filter-images" src="default.png"></a>
+								<a href="#" class="changeFuel" value="2"> Дизель </a>
+							</label>
+						</li>
+					</ul>
+				</section>
+				<div class="hidden-sm-down clear-all-wrapper">
+					<a href="/fleet" class="btn btn-outline" style="display: none;"> Очистити фільтр </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- filters -->
+</body>
+</html>
