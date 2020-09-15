@@ -1,0 +1,190 @@
+.contact-page {
+  font-size: 11px;
+}
+.contact-page hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+.contact-page .blue-bg-mob {
+  background: #0A89FE;
+  padding: 32px 15px;
+}
+.contact-page .blue-bg-mob * {
+  color: #fff;
+}
+.contact-page .contacts_mob {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-page .btn {
+  padding: 5px 32px;
+  width: 239px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-page p {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.contact-page .social-contacts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.contact-page .social-contacts > a {
+  display: none;
+}
+.contact-page .social-contacts .btn-wrap {
+  margin: 16px auto 0;
+}
+.contact-page .social-contacts .socials {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.contact-page .social-contacts .socials img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+.contact-page h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.contact-page h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.contact-page strong {
+  font-weight: 500;
+}
+.contact-page .office-info {
+  padding: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(195, 218, 255, 0.5), 0px 0px 4px rgba(190, 197, 255, 0.3);
+  border-radius: 10px 10px 0 0;
+}
+.contact-page .office-info .btn {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.contact-page .office-photos {
+  margin-top: 16px;
+}
+.contact-page .office-photos img {
+  border-radius: 10px;
+  overflow: hidden;
+  filter: drop-shadow(0px 4px 4px rgba(190, 197, 255, 0.3)) drop-shadow(0px 0px 15px rgba(195, 218, 255, 0.5));
+}
+#ukraineMap {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 16px 2px;
+  top: -10px;
+  left: -15px;
+  width: calc(100% + 30px);
+  border-radius: 10px 10px 0 0;
+  overflow-x: auto;
+}
+#ukraineMap svg {
+  width: 100%;
+  height: auto;
+}
+.blue-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.blue-dots button {
+  display: block;
+  background: #CAE4FF;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  text-indent: -9999px;
+}
+.blue-dots li {
+  margin: 0 4px;
+}
+.blue-dots li.slick-active button {
+  background-color: #0A89FE;
+}
+.gmap {
+  height: 258px;
+}
+@media screen and (max-width: 768px) {
+  #contact-form-box.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .gmap {
+    height: 350px;
+  }
+  .contact-page .blue-bg-mob {
+    background: #fff;
+  }
+  .contact-page .blue-bg-mob * {
+    color: #45536e;
+  }
+  .contact-page .contacts_mob {
+    display: none;
+  }
+  .contact-page hr {
+    display: none;
+  }
+  .contact-page p {
+    font-size: 16px;
+  }
+  .contact-page .btn {
+    width: 245px;
+    padding: 11px 35px;
+  }
+  .contact-page h1 {
+    font-size: 44px;
+  }
+  .contact-page h3 {
+    font-size: 20px;
+  }
+  .contact-page .social-contacts > a {
+    display: block;
+  }
+  .contact-page .social-contacts > a {
+    width: 25%;
+    font-size: 20px;
+    color: #0A89FE;
+  }
+  .contact-page .social-contacts .socials {
+    width: 17%;
+  }
+  .contact-page .social-contacts .socials img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  .contact-page .office-info {
+    box-shadow: none;
+  }
+  .contact-page .office-photos img {
+    padding-right: 16px;
+  }
+  .contact-page .office-info-wrap {
+    display: flex;
+    flex-flow: row-reverse;
+    border-top: 1px solid #DFE4EA;
+    padding-top: 60px;
+    margin-top: 60px;
+  }
+  .contact-page .map {
+    width: 60%;
+  }
+}
