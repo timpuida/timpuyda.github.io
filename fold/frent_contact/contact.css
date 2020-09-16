@@ -197,10 +197,6 @@
   stroke-dasharray: 1px;
   stroke-width: 0.4px;
 }
-#ukraineMap .region:hover,
-#ukraineMap path[data-odesa] {
-  stroke: #45536e;
-  stroke-dasharray: 1px;
-  stroke-width: 0.4px;
+#ukraineMap .region-office {
   cursor: pointer;
 }
