@@ -126,7 +126,7 @@
     padding-right: 0;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
   .gmap {
     height: 350px;
   }
@@ -193,7 +193,6 @@
   }
 }
 .active-region {
-  fill: #fff;
   stroke: #45536e;
   stroke-dasharray: 1px;
   stroke-width: 0.4px;
