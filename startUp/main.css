@@ -247,6 +247,7 @@ button {
 #works {
   display: flex;
   flex-flow: row wrap;
+  justify-content:  center;
   margin: 0 auto;
 }
 .pic-wrap {
