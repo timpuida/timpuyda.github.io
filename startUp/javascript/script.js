@@ -63,17 +63,30 @@
 	});
 
 	// // LATEST WORKS = = = = = = = = = = = = = = =
-	var
+	const
 		navigate = document.querySelector('.navigate'),
 		nav = document.querySelectorAll('.navigate a');
 
 	nav[0].style.color='#c0301c';
+	let currentFilter = 'all'
+
+	const worksPictures = document.body.querySelectorAll('#works > div');
 	navigate.addEventListener('click', function(event){
 		event.preventDefault();
-		if(event.target.tagName != "A" ) return;
+		if (event.target.tagName !== "A" ) return;
 		for (let i = 0; i < nav.length; i++){
 			nav[i].style.color='#555';
-			event.target.style.color='#c0301c';
+		}
+		event.target.style.color='#c0301c';
+		currentFilter = event.target.dataset.filter;
+
+		for (let i = 0; i < worksPictures.length; i++) {
+			worksPictures[i].classList.remove('hidden');
+			if (currentFilter !== 'all'
+				&& worksPictures[i].dataset.filterValue !== currentFilter
+			) {
+				worksPictures[i].classList.add('hidden')
+			}
 		}
 	});
 

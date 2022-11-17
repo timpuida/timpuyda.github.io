@@ -18,37 +18,37 @@
 </head>
 <body>
 	<header>
-		<div class="menu">
+		<nav class="menu">
 			<div class="logo">
 				<a href="#">Startup</a>
 			</div>
 			<div class="menu-items">
 				<ul>
 						<li> <a class="hover-link" href="#">Home</a> </li>
-						<li> <a class="hover-link" href="#">Services </a></li>
-						<li> <a class="hover-link" href="#">About</a> </li>
-						<li> <a class="hover-link" href="#">Works</a> </li>
-						<li> <a class="hover-link" href="#">Blog</a> </li>
-						<li> <a class="hover-link" href="#">Clients</a> </li>
-						<li> <a class="hover-link" href="#">Contact</a> </li>
+						<li> <a class="hover-link" href="#services">Services </a></li>
+						<li> <a class="hover-link" href="#about">About</a> </li>
+						<li> <a class="hover-link" href="#latest-works">Works</a> </li>
+						<li> <a class="hover-link" href="#blog">Blog</a> </li>
+<!--						<li> <a class="hover-link" href="#clients">Clients</a> </li>-->
+						<li> <a class="hover-link" href="#contact">Contact</a> </li>
 
 				</ul>
 			</div>
-		</div>
+		</nav>
 		<div class="welcome animate__animated animate__fadeInUp">
 			<p><span>Welcome to startup</span></p>
 			<p>Your favorite creative agancy template</p>
-			<button data-scroll>Get started</button>
+			<a class="button" href="#contact">Get started</a>
 		</div>
 	</header>
 	<main>
-		<section class="section section-1">
+		<section class="section section-1" id="services">
 			<div class="title wow animate__animated animate__zoomIn">
 					<h1 class="wow animate__animated animate__bounceInLeft">Services</h1>
 				<hr>
 				<div class="title-description">
 					<p>We offer ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>	
+				</div>
 			</div>
 			<div class="offer container  wow animate__animated animate__zoomIn">
 				<div class="offer-box offer-box-img">
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</section>
-		<div class="background"> <!-- section-2 -->
+		<div class="background" id="about"> <!-- section-2 -->
 			<section class="section section-2 container">
 				<div class="title wow animate__animated animate__zoomIn">
 						<h1 class="wow animate__animated animate__bounceInRight">About us</h1>
@@ -263,28 +263,28 @@
 				</div>
 			</section>	
 		</div>
-		<section class="section section-3 container">
+		<section class="section section-3 container" id="latest-works">
 			<div class="title wow animate__animated animate__zoomIn">
 					<h1 class="wow animate__animated animate__bounceInLeft">Latest works</h1>
 				<hr>
-				<div class="navigate">
-					<a href="#">All</a>
-					<a href="#">Branding</a>
-					<a href="#">Design</a>
-					<a href="#">Development</a>
-					<a href="#">Strategy</a>
-				</div>	
+				<div class="navigate" id="filter">
+					<a href="#" data-filter="all">All</a>
+					<a href="#" data-filter="brand">Branding</a>
+					<a href="#" data-filter="design">Design</a>
+					<a href="#" data-filter="development">Development</a>
+<!--					<a href="#" data-filter="strategy">Strategy</a>-->
+				</div>
 			</div>
 			<div id="works" class="wow animate__animated animate__fadeIn">
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w1.jpg" data-name-img = "dryer" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w2.jpg" data-name-img = "bird" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w3.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w4.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w5.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w6.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w7.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w8.jpg" alt=""></div></div>
-				<div class="pic-wrap"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w9.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="brand"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w1.jpg" data-name-img = "dryer" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="design"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w2.jpg" data-name-img = "bird" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="development"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w3.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="design"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w4.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="brand"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w5.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="design"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w6.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="development"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w7.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="development"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w8.jpg" alt=""></div></div>
+				<div class="pic-wrap" data-filter-value="brand"><div class="pic"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><img src="img/w9.jpg" alt=""></div></div>
 			</div>
 			<div class="modals">
 				<div id="overlay"></div>
@@ -311,9 +311,9 @@
 		<div class="section get-in-touch">
 			<p>Do you like <span>our work</span> so far?</p>
 			<p>Let's talk about <span>your project</span>!</p>
-			<button data-scroll>Get in touch</button>
+			<a class="button" href="#contact">Get in touch</a>
 		</div>
-		<section class="section section-4">
+		<section class="section section-4" id="blog">
 			<div class="title wow animate__animated animate__zoomIn">
 					<h1 class="wow animate__animated animate__bounceInRight">Recent blog posts</h1>
 				<hr>
@@ -368,7 +368,7 @@
 			</div>
 		</section>
 		<div class="background">
-			<section class="section section-5 container">
+			<section class="section section-5 container" id="contact">
 				<div class="title wow animate__animated animate__zoomIn">
 						<h1 class="wow animate__animated animate__bounceInLeft">Get in touch</h1>
 					<hr>
@@ -400,14 +400,14 @@
 					</div>
 					<form action="#">
 						<div class="name-mail form-box">
-							<input type="text" placeholder="Name">
-							<input type="text" placeholder="your e-mail">
+							<input type="text" placeholder="Name" required>
+							<input type="email" placeholder="your e-mail" required>
 						</div>
 						<div class="subject-company form-box">
 							<input type="text" placeholder="Subject">
 							<input type="text" placeholder="Company Name">
-						</div>	
-						<textarea name="message" id="text-message" cols="30" rows="10" placeholder=" WRIGHT YOUR MESSAGE"></textarea>
+						</div>
+						<textarea name="message" id="text-message" cols="30" rows="10" placeholder="WRIGHT YOUR MESSAGE" required></textarea>
 						<input type="submit">
 					</form>
 				</div>
